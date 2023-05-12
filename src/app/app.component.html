@@ -1,51 +1,63 @@
 
-<div class="login">
-  <mat-card >
-    <mat-card-content class="card-dimen">
+<div class="login pt-5">
+  <div class="container">
+        <h2 class="login-title">Log In</h2>
+    
+        <form [formGroup]="myForm" (ngSubmit)="Submit(myForm)" class="login-form">
 
-      <h3 class="card">Log In</h3>
-      <form [formGroup]="myForm" (ngSubmit)="Submit(myForm)" class="example-form">
-
-        <table>
-          <tr>
-
-            <td>
-
-              <mat-form-field class="example-full-width">
+          <div>
+            <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email" placeholder="Enter Your Email">
                 <mat-error *ngIf="valid['email']?.invalid">
                 email required!!
                 </mat-error>
               </mat-form-field>
-            </td>
-
-          
-          </tr>
-          <tr>
-
-            <td>
-
-              <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input matInput formControlName="email" placeholder="Enter Your Email">
-                <mat-error *ngIf="valid['email']?.invalid">
-                email required!!
+          </div>
+    
+          <div>
+           <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" placeholder="Enter Password">
+                <mat-error *ngIf="valid['password']?.invalid">
+                password required!!
                 </mat-error>
               </mat-form-field>
-            </td>
+          </div>
 
-          
-          </tr>
-        </table>
+          <div class="row">
+            <div class="col-lg-6"><input type="checkbox"> Remember me</div>
+            <div class="col-lg-6"><a class="forgot" href="">Forgot Password</a></div>
+          </div>
+    
+          <button class="btn btn--form btn-primary" type="submit" value="Log in">
+            Log in
+          </button>
 
-        <div class="justify-content-end d-flex p-1">
+          <span class="border"></span>
 
-        <button mat-raised-button color="primary">Sign In</button>
+          <h2 class="login-title">Log In Via</h2>
 
-        </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
+          <div class="row">
+            <div class="col-lg-4 text-center">
+            <a>
+             <mat-icon >facebook</mat-icon>
+            </a>
+            </div>
+            <div class="col-lg-4 text-center">
+            <a >
+             <mat-icon >circle</mat-icon>
+            </a>
+            </div>
+            <div class="col-lg-4 text-center" >
+            <a>
+             <mat-icon class="large">apple</mat-icon>
+            </a>
+            </div>
+          </div>
+            <p class="bottom">Doesn't have an account? <br> <a href="">Create Account</a></p>
+
+        </form>
+    </div>
 </div>
 

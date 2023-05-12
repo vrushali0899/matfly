@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {CommonModule} from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {CommonModule} from '@angular/common';
     MatCheckboxModule,
     NgbModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

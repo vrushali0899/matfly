@@ -1,0 +1,51 @@
+
+<div class="login">
+  <mat-card >
+    <mat-card-content class="card-dimen">
+
+      <h3 class="card">Log In</h3>
+      <form [formGroup]="myForm" (ngSubmit)="Submit(myForm)" class="example-form">
+
+        <table>
+          <tr>
+
+            <td>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Enter Your Email">
+                <mat-error *ngIf="valid['email']?.invalid">
+                email required!!
+                </mat-error>
+              </mat-form-field>
+            </td>
+
+          
+          </tr>
+          <tr>
+
+            <td>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Enter Your Email">
+                <mat-error *ngIf="valid['email']?.invalid">
+                email required!!
+                </mat-error>
+              </mat-form-field>
+            </td>
+
+          
+          </tr>
+        </table>
+
+        <div class="justify-content-end d-flex p-1">
+
+        <button mat-raised-button color="primary">Sign In</button>
+
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
